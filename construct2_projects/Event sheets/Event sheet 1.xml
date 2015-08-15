@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="9127404914912347">
+            <conditions>
+                <condition id="0" name="On function" sid="1397697321083548" type="Function">
+                    <param id="0" name="Name">&quot;turn_top2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="6999044706507996" type="Player2">
+                    <param id="0" name="Angle">-90</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7447074891899856">
+            <conditions>
+                <condition id="0" name="On function" sid="7210271159683928" type="Function">
+                    <param id="0" name="Name">&quot;turn_bottom2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="5189134311237035" type="Player2">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3066234401495932">
+            <conditions>
+                <condition id="0" name="On function" sid="5942077977061243" type="Function">
+                    <param id="0" name="Name">&quot;turn_left2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="5318041726816915" type="Player2">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8539600288640306">
+            <conditions>
+                <condition id="0" name="On function" sid="3025726964071793" type="Function">
+                    <param id="0" name="Name">&quot;turn_right2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="2024461762279839" type="Player2">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5764321213081745">
+            <conditions>
+                <condition id="0" name="On function" sid="9467056987463919" type="Function">
+                    <param id="0" name="Name">&quot;turn_top1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="8386143049347582" type="Player">
+                    <param id="0" name="Angle">-90</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="703300589368247">
+            <conditions>
+                <condition id="0" name="On function" sid="1004348268040637" type="Function">
+                    <param id="0" name="Name">&quot;turn_bottom1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="7106936999157126" type="Player">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7262268012313419">
+            <conditions>
+                <condition id="0" name="On function" sid="1538796666608813" type="Function">
+                    <param id="0" name="Name">&quot;turn_left1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="7433857962841491" type="Player">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7042090428540445">
+            <conditions>
+                <condition id="0" name="On function" sid="3912619271462781" type="Function">
+                    <param id="0" name="Name">&quot;turn_right1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="2530848243219578" type="Player">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5091327445493019">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5829682554557511" type="Keyboard">
+                    <param id="0" name="Key">84 (T)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8203254679316073" type="Function">
+                    <param id="0" name="Name">&quot;turn_top2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2602108810660932">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9962196559744708" type="Keyboard">
+                    <param id="0" name="Key">66 (B)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9195453074684931" type="Function">
+                    <param id="0" name="Name">&quot;turn_bottom2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="249820173401759">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2286579461870912" type="Keyboard">
+                    <param id="0" name="Key">76 (L)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="7127248512503994" type="Function">
+                    <param id="0" name="Name">&quot;turn_left2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9141808038424344">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7045071936882433" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8534276666480594" type="Function">
+                    <param id="0" name="Name">&quot;turn_right2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

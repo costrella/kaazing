@@ -14416,6 +14416,7 @@ cr.plugins_.Keyboard = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
+alert("KTH");
 ;
 ;
 cr.plugins_.MyPlugin = function(runtime)
@@ -14490,8 +14491,8 @@ var subscriptionsTable;
 var destinationCounter = 1;
 var toggleJmsHeadersCb;
 function handleConnect() {
-					var url = "ws://192.168.1.6:8001/jms";
-					console.log("CONNECTING... " + url);
+					var url = "ws://192.168.1.3:8001/jms";
+					console.log("CONNECTING... ::) " + url);
 					var jmsConnectionFactory = new JmsConnectionFactory(url);
 					setupSSO(jmsConnectionFactory.getWebSocketFactory());
 					try {
@@ -14558,49 +14559,6 @@ function handleSubscribe() {
         handleMessage(name, destinationId, message);
     });
 }
-function callFirstPlayer(message) {
-	var props = message.getPropertyNames();
-    while (props.hasMoreElements()) {
-        var propName = props.nextElement();
-		if(propName == "turn_top1"){
-			c2_callFunction("turn_top1");
-		}else if(propName == "turn_bottom1"){
-			c2_callFunction("turn_bottom1");
-		}else if(propName == "turn_left1"){
-			c2_callFunction("turn_left1");
-		}else if(propName == "turn_right1"){
-			c2_callFunction("turn_right1");
-		}
-    }
-}
-function callSecondPlayer(message) {
-	var props = message.getPropertyNames();
-    while (props.hasMoreElements()) {
-        var propName = props.nextElement();
-		if(propName == "turn_top2"){
-			c2_callFunction("turn_top2");
-		}else if(propName == "turn_bottom2"){
-			c2_callFunction("turn_bottom2");
-		}else if(propName == "turn_left2"){
-			c2_callFunction("turn_left2");
-		}else if(propName == "turn_right2"){
-			c2_callFunction("turn_right2");
-		}
-    }
-}
-function recognizeMessage(message) {
-	var userId;
-	if (message instanceof TextMessage) {
-        userId = message.getText();
-		if(userId == "1"){
-			callFirstPlayer(message);
-		}else if(userId == "2"){
-			callSecondPlayer(message);
-		}else{
-			console.log("Nie rozpoznano gracza, userId =" + userId);
-		}
-    }
-}
 function handleMessage(destination, destinationId, message) {
     var content = "";
     if (message instanceof TextMessage) {
@@ -14645,7 +14603,7 @@ function handleMessage(destination, destinationId, message) {
     }
     console.log(content);
 	if (c2_callFunction){
-		recognizeMessage(message);
+		c2_callFunction("myFirstFunction");
 	}
 }
 }());
@@ -16919,7 +16877,6 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Text,
 	cr.behaviors.EightDir,
 	cr.plugins_.Function.prototype.cnds.OnFunction,
-	cr.plugins_.Sprite.prototype.acts.MoveAtAngle,
-	cr.plugins_.Keyboard.prototype.cnds.OnKey,
-	cr.plugins_.Function.prototype.acts.CallFunction
+	cr.plugins_.Sprite.prototype.acts.MoveForward,
+	cr.plugins_.Keyboard.prototype.cnds.OnKey
 ];};

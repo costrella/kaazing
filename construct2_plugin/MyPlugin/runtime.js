@@ -296,6 +296,53 @@ function handleSubscribe() {
 
 }
 
+function callFirstPlayer(message) {
+	var props = message.getPropertyNames();
+    while (props.hasMoreElements()) {
+        var propName = props.nextElement();
+		if(propName == "turn_top1"){
+			c2_callFunction("turn_top1");
+		}else if(propName == "turn_bottom1"){
+			c2_callFunction("turn_bottom1");
+		}else if(propName == "turn_left1"){
+			c2_callFunction("turn_left1");
+		}else if(propName == "turn_right1"){
+			c2_callFunction("turn_right1");
+		}
+    }
+}
+
+function callSecondPlayer(message) {
+	var props = message.getPropertyNames();
+    while (props.hasMoreElements()) {
+        var propName = props.nextElement();
+		if(propName == "turn_top2"){
+			c2_callFunction("turn_top2");
+		}else if(propName == "turn_bottom2"){
+			c2_callFunction("turn_bottom2");
+		}else if(propName == "turn_left2"){
+			c2_callFunction("turn_left2");
+		}else if(propName == "turn_right2"){
+			c2_callFunction("turn_right2");
+		}
+    }
+}
+
+function recognizeMessage(message) {
+	var userId;
+	if (message instanceof TextMessage) {
+        userId = message.getText();
+		if(userId == "1"){
+			callFirstPlayer(message);
+		}else if(userId == "2"){
+			callSecondPlayer(message);
+		}else{
+			console.log("Nie rozpoznano gracza, userId =" + userId);
+		}
+		
+    }
+}
+
 function handleMessage(destination, destinationId, message) {
     var content = "";
 
@@ -344,7 +391,7 @@ function handleMessage(destination, destinationId, message) {
     console.log(content);
 	//call c2 function
 	if (c2_callFunction){
-		c2_callFunction("myFirstFunction");
+		recognizeMessage(message);
 	}
 
 }
